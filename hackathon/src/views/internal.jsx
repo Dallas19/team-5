@@ -61,28 +61,26 @@ class Internal extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Program A</CardTitle>
+                  <CardTitle tag="h5">Program 1A</CardTitle>
 
                 </CardHeader>
                 <CardBody>
 
                 <p className="card-category">How Much</p>
                   <HorizontalBar
-                    height={20} data={howMuch.data} options = {howMuch.options}/>
-                    <HorizontalBar
-                    height={20} data={howMuch2.data} options = {howMuch2.options} />
+                    height={30} data={howMuch.data} options = {howMuch.options}/>
                     
                     <br/>
 
                     <p className="card-category">How Well</p>
                     <HorizontalBar
-                    height={20} data={howWell.data} options = {howWell.options}/>
+                    height={30} data={howWell.data} options = {howWell.options}/>
                     
                     <br/>
 
                     <p className="card-category">Better Off</p>
                     <HorizontalBar
-                    height= {20} data={betterOff.data} options = {betterOff.options}/>
+                    height= {30} data={betterOff.data} options = {betterOff.options}/>
 
                 </CardBody>
                 <CardFooter>

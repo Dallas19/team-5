@@ -22,6 +22,7 @@ import Internal from "views/internal.jsx";
 import InternalB from "views/internalB.jsx";
 import InternalC from "views/internalC.jsx";
 import Strategy from "views/Strategy.jsx";
+import StratExt from "views/StratExt.jsx";
 var routes = [
   {
     path: "/dashboard",
@@ -60,9 +61,16 @@ var routes = [
   },
   {
     path: "/strategy",
-    name: "Strategy",
+    name: "Strategy Internal",
     icon: "nc-icon nc-diamond",
     component: Strategy,
+    layout: "/admin"
+  },
+  {
+    path: "/StratExt",
+    name: "Strategy External",
+    icon: "nc-icon nc-diamond",
+    component: StratExt,
     layout: "/admin"
   }
 ];

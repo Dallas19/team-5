@@ -36,6 +36,7 @@ import {
   howMuch3,
   howWell1,
   howWell2,
+  howWell3,
   betterOff1,
   betterOff2,
   betterOff3
@@ -50,7 +51,7 @@ const data = {
       borderColor: 'rgba(255,99,132,1)',
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
+      hoverBorderColor: 'rgba(221,95,50,1)',
       data: [65, 59, 80]
     }
   ]
@@ -74,27 +75,29 @@ below 200% of FPL. </p>
 
                   <p className="card-category">How Much</p>
                   <HorizontalBar
-                    height={20} data={howMuch.data} options = {howMuch.options}/>
+                    height={30} data={howMuch.data} options = {howMuch.options}/>
                     <HorizontalBar
-                    height={20} data={howMuch2.data} options = {howMuch2.options} />
+                    height={30} data={howMuch2.data} options = {howMuch2.options} />
                      <HorizontalBar
-                    height={20} data={howMuch3.data} options = {howMuch3.options} />
+                    height={30} data={howMuch3.data} options = {howMuch3.options} />
                     <br/>
 
                     <p className="card-category">How Well</p>
                     <HorizontalBar
-                    height={20} data={howWell1.data} options = {howWell1.options}/>
+                    height={30} data={howWell1.data} options = {howWell1.options}/>
                     <HorizontalBar
-                    height={20} data={howWell2.data} options = {howWell2.options} />
+                    height={30} data={howWell2.data} options = {howWell2.options} />
+                    <HorizontalBar
+                    height={30} data={howWell3.data} options = {howWell3.options} />
                     <br/>
 
                     <p className="card-category">Better Off</p>
                     <HorizontalBar
-                    height= {20} data={betterOff1.data} options = {betterOff1.options}/>
+                    height= {30} data={betterOff1.data} options = {betterOff1.options}/>
                     <HorizontalBar
-                    height={20} data={betterOff2.data} options = {betterOff2.options} />
+                    height={30} data={betterOff2.data} options = {betterOff2.options} />
                     <HorizontalBar
-                    height={20} data={betterOff3.data} options = {betterOff3.options} />
+                    height={30} data={betterOff3.data} options = {betterOff3.options} />
                     
 
                 </CardBody>

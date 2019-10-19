@@ -23,10 +23,11 @@ const howMuch = {
           labels: ["Metric A"],
           datasets: [
             {
-            //   label: ,
+                label: "# of People under 200% Federal Poverty Level Enrolled in Program(How Much) SIFIC 1A",
               pointRadius: 0,
               pointHoverRadius: 0,
-              backgroundColor: ["#DD5F32", "#EEB449", "#215393", "#DD5F32"],
+              backgroundColor: ['rgba(221,95,50,0.65)', "#EEB449", "#215393", "#DD5F32"],
+              hoverBackgroundColor: 'rgba(221,95,50,1)',
               borderWidth: 0,
               data: [342, 480, 530, 120]
             }
@@ -53,10 +54,11 @@ const howMuch = {
               labels: ["Metric B"],
               datasets: [
                 {
-                label: "# of people under 200% Federal Poverty Level Recruited for Program",
-                  pointRadius: 0,
+                    label: "# of People under 200% Federal Poverty Level Enrolled in Program(How Much) SIFIC 1B",
+                    pointRadius: 0,
                   pointHoverRadius: 0,
-                  backgroundColor: ["#DD5F32", "#EEB449", "#215393", "#DD5F32"],
+                  backgroundColor: ['rgba(221,95,50,0.65)',"#DD5F32", "#EEB449", "#215393", "#DD5F32"],
+                  hoverBackgroundColor: 'rgba(221,95,50,1)',
                   borderWidth: 0,
                   data: [600]
                 }
@@ -83,10 +85,11 @@ const howMuch = {
               labels: ["Metric C"],
               datasets: [
                 {
-                label: "# of people under 200% Federal Poverty Level Recruited for Program",
+                    label: "# of People under 200% Federal Poverty Level Enrolled in Program(How Much) SIFIC 1C",
                   pointRadius: 0,
                   pointHoverRadius: 0,
-                  backgroundColor: ["#DD5F32", "#EEB449", "#215393", "#DD5F32"],
+                  backgroundColor: ['rgba(221,95,50,0.65)',"#DD5F32", "#EEB449", "#215393", "#DD5F32"],
+                  hoverBackgroundColor: 'rgba(221,95,50,1)',
                   borderWidth: 0,
                   data: [600]
                 }
@@ -113,10 +116,11 @@ const howMuch = {
               labels: ["Metric A"],
               datasets: [
                 {
-                //   label: ,
+                    label: "# of Recruited People who were Enrolled in Program (How Well) SIFIC 1A",
                   pointRadius: 0,
                   pointHoverRadius: 0,
-                  backgroundColor: ["#EEB449", "#215393", "#DD5F32"],
+                  backgroundColor: ['RGBA(238,180,73,0.65)', "#215393", "#DD5F32"],
+                  hoverBackgroundColor: 'RGBA(238,180,73,1)',
                   borderWidth: 0,
                   data: [ 180]
                 }
@@ -143,12 +147,44 @@ const howMuch = {
                   labels: ["Metric B"],
                   datasets: [
                     {
-                    label: "# of people under 200% Federal Poverty Level Recruited for Program",
-                      pointRadius: 0,
+                        label: "# of Recruited People who were Enrolled in Program (How Well) SIFIC 1B",
+                        pointRadius: 0,
                       pointHoverRadius: 0,
-                      backgroundColor: [ "#EEB449", "#215393", "#DD5F32"],
+                      backgroundColor: [ 'RGBA(238,180,73,0.65)', "#215393", "#DD5F32"],
+                      hoverBackgroundColor: 'RGBA(238,180,73,1)',
                       borderWidth: 0,
                       data: [50]
+                    }
+                  ]
+                };
+              },
+              options: {
+                scales:{
+                    xAxes:[{
+                        ticks:{
+                            beginAtZero: true,
+                            steps: 12,
+                            stepValue: 5,
+                            max: 60
+      
+                        }
+                    }]
+                }
+            }
+        };
+        const howWell3 = {
+            data: canvas => {
+                return {
+                  labels: ["Metric B"],
+                  datasets: [
+                    {
+                        label: "# of Recruited People who were Enrolled in Program (How Well) SIFIC 1c",
+                        pointRadius: 0,
+                      pointHoverRadius: 0,
+                      backgroundColor: [ 'RGBA(238,180,73,0.65)', "#215393", "#DD5F32"],
+                      hoverBackgroundColor: 'RGBA(238,180,73,1)',
+                      borderWidth: 0,
+                      data: [55]
                     }
                   ]
                 };
@@ -174,10 +210,11 @@ const betterOff1 = {
           labels: ["Metric A"],
           datasets: [
             {
-            label: "# of people under 200% Federal Poverty Level Recruited for Program",
+            label: "# of Participating Clients with Income above 200% of Federal Poverty Level at the time of Program Completions SIFIC 1a",
               pointRadius: 0,
               pointHoverRadius: 0,
-              backgroundColor: [ "#215393", "#DD5F32"],
+              backgroundColor: [ "rgba(33,83,147,0.65)", "#DD5F32"],
+              hoverBackgroundColor: 'rgba(33,83,147,1)',
               borderWidth: 0,
               data: [76]
             }
@@ -204,10 +241,11 @@ const betterOff2 = {
           labels: ["Metric B"],
           datasets: [
             {
-            label: "# of people under 200% Federal Poverty Level Recruited for Program",
-              pointRadius: 0,
+                label: "# of Participating Clients with Income above 200% of Federal Poverty Level at the time of Program Completions SIFIC 1B",
+                pointRadius: 0,
               pointHoverRadius: 0,
-              backgroundColor: [ "#215393", "#DD5F32"],
+              backgroundColor: [ "rgba(33,83,147,0.65)", "#DD5F32"],
+              hoverBackgroundColor: 'rgba(33,83,147,1)',
               borderWidth: 0,
               data: [160]
             }
@@ -234,10 +272,11 @@ const betterOff3 = {
           labels: ["Metric C"],
           datasets: [
             {
-            label: "# of people under 200% Federal Poverty Level Recruited for Program",
-              pointRadius: 0,
+                label: "# of Participating Clients with Income above 200% of Federal Poverty Level at the time of Program Completions SIFIC 1C",
+                pointRadius: 0,
               pointHoverRadius: 0,
-              backgroundColor: [  "#215393", "#DD5F32"],
+              backgroundColor: [  "rgba(33,83,147,0.65)", "#DD5F32"],
+              hoverBackgroundColor: 'rgba(33,83,147,1)',
               borderWidth: 0,
               data: [190]
             }
@@ -265,6 +304,7 @@ module.exports = {
   howMuch3,
   howWell1,
   howWell2,
+  howWell3,
   betterOff1,
   betterOff2,
   betterOff3

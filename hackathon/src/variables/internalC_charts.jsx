@@ -23,10 +23,11 @@ const howMuch = {
           labels: ["Metric A"],
           datasets: [
             {
-            label: "",
-              pointRadius: 0,
+                label: "# of People under 200% Federal Poverty Level Enrolled in Program",
+                pointRadius: 0,
               pointHoverRadius: 0,
-              backgroundColor: ["#DD5F32"],
+              backgroundColor: ['rgba(221,95,50,0.65)',"#DD5F32"],
+              hoverBackgroundColor: 'rgba(221,95,50,1)',
               borderWidth: 0,
               data: [340]
             }
@@ -47,46 +48,17 @@ const howMuch = {
           }
       }
     };
-    const howMuch2 = {
-        data: canvas => {
-            return {
-              labels: ["Metric A"],
-              datasets: [
-                {
-                label: "",
-                  pointRadius: 0,
-                  pointHoverRadius: 0,
-                  backgroundColor: ["#DD5F32"],
-                  borderWidth: 0,
-                  data: [320]
-                }
-              ]
-            };
-          },
-          options: {
-              scales:{
-                  xAxes:[{
-                      ticks:{
-                          beginAtZero: true,
-                          steps: 12,
-                          stepValue: 25,
-                          max: 300
-    
-                      }
-                  }]
-              }
-          }
-        };
     const howWell = {
         data: canvas => {
             return {
               labels: ["Metric A"],
               datasets: [
                 {
-                label: "# of people under 200% Federal Poverty Level Recruited for Program",
+                label: "# of Recruited People who were Enrolled in Program ",
                   pointRadius: 0,
                   pointHoverRadius: 0,
-                  backgroundColor: [ "#EEB449", "#215393", "#DD5F32"],
+                  backgroundColor: [ 'RGBA(238,180,73,0.65)', "#215393", "#DD5F32"],
+                  hoverBackgroundColor: 'RGBA(238,180,73,1)',
                   borderWidth: 0,
                   data: [650]
                 }
@@ -113,10 +85,11 @@ const howMuch = {
               labels: ["Metric A"],
               datasets: [
                 {
-                label: "# of people under 200% Federal Poverty Level Recruited for Program",
+                label: "# of People under 200% Federal Poverty Level Recruited for Program",
                   pointRadius: 0,
                   pointHoverRadius: 0,
-                  backgroundColor: ["#215393", "#DD5F32"],
+                  backgroundColor: ["rgba(33,83,147,0.65)", "#DD5F32"],
+                  hoverBackgroundColor: 'rgba(33,83,147,1)',
                   borderWidth: 0,
                   data: [235]
                 }
@@ -140,7 +113,6 @@ const howMuch = {
 
 module.exports = {
   howMuch,
-  howMuch2,
   howWell,
   betterOff
 };
