@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Paper Dashboard React - v1.1.0
+* Paper Impacts React - v1.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/paper-dashboard-react
@@ -16,28 +16,22 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Dashboard from "views/Dashboard.jsx";
-import Notifications from "views/Notifications.jsx";
-import Icons from "views/Icons.jsx";
-import Typography from "views/Typography.jsx";
-import TableList from "views/Tables.jsx";
-import Maps from "views/Map.jsx";
-import UserPage from "views/User.jsx";
-import UpgradeToPro from "views/Upgrade.jsx";
+import Impacts from "views/Impacts.jsx";
+import Internal from "views/Internal.jsx";
 
 var routes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
+    path: "/Impacts",
+    name: "Impact Councils",
     icon: "nc-icon nc-bank",
-    component: Dashboard,
+    component: Impacts,
     layout: "/admin"
   },
   {
-    path: "/icons",
-    name: "Icons",
+    path: "/interal",
+    name: "Internal",
     icon: "nc-icon nc-diamond",
-    component: Icons,
+    component: Internal,
     layout: "/admin"
   }
 ];
