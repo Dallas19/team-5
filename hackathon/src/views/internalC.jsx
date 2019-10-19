@@ -35,7 +35,7 @@ import {
   howMuch2,
   howWell,
   betterOff
-} from "variables/internal_charts.jsx";
+} from "variables/internalB_charts.jsx";
 
 const data = {
   labels: ['Metric 1', 'Metric 2', 'Metric 3'],
@@ -52,7 +52,7 @@ const data = {
   ]
 };
 
-class Internal extends React.Component {
+class InternalC extends React.Component {
   render() {
     return (
       <>
@@ -61,7 +61,7 @@ class Internal extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Program A</CardTitle>
+                  <CardTitle tag="h5">Program C</CardTitle>
 
                 </CardHeader>
                 <CardBody>
@@ -100,4 +100,4 @@ class Internal extends React.Component {
   }
 }
 
-export default Internal;
+export default InternalC;

@@ -39,8 +39,8 @@ const howMuch = {
                   ticks:{
                       beginAtZero: true,
                       steps: 12,
-                      stepValue: 30,
-                      max: 360
+                      stepValue: 40,
+                      max: 480
 
                   }
               }]
@@ -69,8 +69,8 @@ const howMuch = {
                       ticks:{
                           beginAtZero: true,
                           steps: 12,
-                          stepValue: 25,
-                          max: 300
+                          stepValue: 20,
+                          max: 240
     
                       }
                   }]
@@ -88,7 +88,7 @@ const howMuch = {
                   pointHoverRadius: 0,
                   backgroundColor: [ "#EEB449", "#215393", "#DD5F32"],
                   borderWidth: 0,
-                  data: [650]
+                  data: [600]
                 }
               ]
             };
@@ -130,7 +130,7 @@ const howMuch = {
                         beginAtZero: true,
                         steps: 12,
                         stepValue: 22,
-                        max: 264
+                        max: 500
   
                     }
                 }]
