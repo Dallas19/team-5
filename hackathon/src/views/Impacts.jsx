@@ -1,20 +1,13 @@
 /*!
-
 =========================================================
 * Paper Dashboard React - v1.1.0
 =========================================================
-
 * Product Page: https://www.creative-tim.com/product/paper-dashboard-react
 * Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
 * Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard-react/blob/master/LICENSE.md)
-
 * Coded by Creative Tim
-
 =========================================================
-
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 */
 import React from "react";
 // react plugin used to create charts
@@ -56,6 +49,7 @@ class Dashboard extends React.Component {
     return (
       <>
         <div className="content">
+        <h3>Indicator 1</h3>
           <Row>
             <Col md="12">
               <Card>
@@ -92,10 +86,118 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row>
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h5">Strategy 2</CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <Row>
+                    <Col>
+                <p className="card-category">How Much</p>
+                  <HorizontalBar width={200}
+                    height={100} data={data} />
+                    <br/>
+                    </Col>
+                    <Col>
+                    <p className="card-category">How Well</p>
+                    <HorizontalBar width={200}
+                    height={100} data={data} />
+                    <br/>
+                    </Col>
+                    <Col>
+                    <p className="card-category">Better Off</p>
+                    <HorizontalBar width={200}
+                    height={100} data={data} />
+                    </Col>
+                    </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="fa fa-history" /> Updated 3 minutes ago
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+          </Row>
+          <h3>Indicator 2</h3>
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h5">Strategy 1</CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <Row>
+                    <Col>
+                <p className="card-category">How Much</p>
+                  <HorizontalBar width={200}
+                    height={100} data={data} />
+                    <br/>
+                    </Col>
+                    <Col>
+                    <p className="card-category">How Well</p>
+                    <HorizontalBar width={200}
+                    height={100} data={data} />
+                    <br/>
+                    </Col>
+                    <Col>
+                    <p className="card-category">Better Off</p>
+                    <HorizontalBar width={200}
+                    height={100} data={data} />
+                    </Col>
+                    </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="fa fa-history" /> Updated 3 minutes ago
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h5">Strategy 2</CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <Row>
+                    <Col>
+                <p className="card-category">How Much</p>
+                  <HorizontalBar width={200}
+                    height={100} data={data} />
+                    <br/>
+                    </Col>
+                    <Col>
+                    <p className="card-category">How Well</p>
+                    <HorizontalBar width={200}
+                    height={100} data={data} />
+                    <br/>
+                    </Col>
+                    <Col>
+                    <p className="card-category">Better Off</p>
+                    <HorizontalBar width={200}
+                    height={100} data={data} />
+                    </Col>
+                    </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="fa fa-history" /> Updated 3 minutes ago
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+          </Row>
         </div>
       </>
     );
   }
 }
-
 export default Dashboard;
