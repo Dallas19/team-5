@@ -26,7 +26,7 @@ import StratExt from "views/StratExt.jsx";
 var routes = [
   {
     path: "/dashboard",
-    name: "Dashboard",
+    name: "Internal",
     icon: "nc-icon nc-bank",
     component: Dashboard,
     layout: "/admin"
@@ -68,7 +68,7 @@ var routes = [
   },
   {
     path: "/StratExt",
-    name: "Strategy External",
+    name: "External",
     icon: "nc-icon nc-diamond",
     component: StratExt,
     layout: "/admin"

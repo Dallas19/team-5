@@ -58,42 +58,60 @@ class Sidebar extends React.Component {
       >
         <div className="logo">
           <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-mini"
+            href="https://www.unitedwaysatx.org/"
+            className="simple-text align-center"
           >
             <div className="logo-img">
               <img src={logo} alt="react-logo" />
             </div>
           </a>
           <a
-            href="https://www.creative-tim.com"
+            href="https://www.unitedwaysatx.org/"
             className="simple-text logo-normal"
+            style={{textAlign: 'center'}}
           >
-            Creative Tim
+            United Way
           </a>
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>
           <Nav>
-            {this.props.routes.map((prop, key) => {
               return (
+                <div>
                 <li
                   className={
-                    this.activeRoute(prop.path) +
-                    (prop.pro ? " active-pro" : "")
+                    this.activeRoute("/dashboard") +
+                    ("prop.pro" ? " active-pro" : "")
                   }
-                  key={key}
+                  key={"Internal"}
                 >
                   <NavLink
-                    to={prop.layout + prop.path}
+                    to={"/admin/dashboard"}
                     className="nav-link"
                     activeClassName="active"
                   >
-                    <i className={prop.icon} />
-                    <p>{prop.name}</p>
+                    <i className="nc-icon nc-bank" />
+                    <p>Internal</p>
                   </NavLink>
                 </li>
+                <li
+                className={
+                  this.activeRoute("StratExt") +
+                  ("prop.pro" ? " active-pro" : "")
+                }
+                key={"External"}
+              >
+                <NavLink
+                  to={"/admin/StratExt"}
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  <i className={"nc-icon nc-diamond"} />
+                  <p>External</p>
+                </NavLink>
+              </li>
+              </div>
               );
-            })}
+            })
           </Nav>
         </div>
       </div>

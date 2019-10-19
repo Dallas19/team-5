@@ -16,9 +16,11 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useState} from "react";
 // react plugin used to create charts
 import { Line, Pie, HorizontalBar } from "react-chartjs-2";
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import classnames from 'classnames';
 // reactstrap components
 import {
   Card,
@@ -52,11 +54,67 @@ const data = {
   ]
 };
 
-class StratExt extends React.Component {
-  render() {
+const StratExt = (props) => {
+    const [activeTab, setActiveTab] = useState('1');
+  
+    const toggle = tab => {
+      if(activeTab !== tab) setActiveTab(tab);
+    }
+
     return (
       <>
         <div className="content">
+      <Nav tabs>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '1' })}
+            onClick={() => { toggle('1'); }}
+          >
+            READY CHILDREN
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '2' })}
+            onClick={() => { toggle('2'); }}
+          >
+            SUCCESSFUL STUDENTS
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => { toggle('3'); }}
+          >
+            STRONG INDIVIDUALS AND FAMILIES
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '4' })}
+            onClick={() => { toggle('4'); }}
+          >
+            SAFETY NET
+          </NavLink>
+        </NavItem>
+      </Nav>
+      <TabContent activeTab={activeTab}>
+        <TabPane tabId="1">
+          
+        </TabPane>
+        <TabPane tabId="2">
+          
+        </TabPane>
+        <TabPane tabId="3">
+          
+        </TabPane>
+        <TabPane tabId="4">
+          
+        </TabPane>
+      </TabContent>
+      <br/>
+    <h4><u>Indicator 1 : % of population at or below 200% of Federal Poverty Level (FPL)</u></h4>
+    <br/>
           <Row>
             <Col md="12">
               <Card>
@@ -98,6 +156,5 @@ below 200% of FPL. </p>
       </>
     );
   }
-}
 
 export default StratExt;

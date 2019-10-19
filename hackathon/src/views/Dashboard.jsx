@@ -19,6 +19,8 @@
 import React from "react";
 // react plugin used to create charts
 import { Line, Pie, HorizontalBar } from "react-chartjs-2";
+import Strategies from "components/Tabs";
+import Strategies2 from "components/Tabs-with-buttons";
 // reactstrap components
 import {
   Card,
@@ -56,42 +58,8 @@ class Dashboard extends React.Component {
     return (
       <>
         <div className="content">
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h5">Strategy 1</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Row>
-                    <Col>
-                <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
-                </CardBody>
-                <CardFooter>
-                  <hr />
-                  <div className="stats">
-                    <i className="fa fa-history" /> Updated 3 minutes ago
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
+          <Strategies2/>
+          
         </div>
       </>
     );
