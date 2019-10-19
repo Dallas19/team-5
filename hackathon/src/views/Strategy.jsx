@@ -32,9 +32,14 @@ import {
 // core components
 import {
   howMuch,
-  howWell,
-  betterOff
-} from "variables/charts.jsx";
+  howMuch2,
+  howMuch3,
+  howWell1,
+  howWell2,
+  betterOff1,
+  betterOff2,
+  betterOff3
+} from "variables/strategy_charts.jsx";
 
 const data = {
   labels: ['Metric 1', 'Metric 2', 'Metric 3'],
@@ -51,7 +56,7 @@ const data = {
   ]
 };
 
-class Dashboard extends React.Component {
+class Strategy extends React.Component {
   render() {
     return (
       <>
@@ -60,28 +65,38 @@ class Dashboard extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Strategy 1</CardTitle>
+                  <CardTitle tag="h5">Strategy A</CardTitle>
+                  <p >Provide and/or build capacity for organizations that offer education and workforce development (e.g. adult basic
+education and/or non-degree certificates, industry-specific certificates or other career pathways) to clients at or
+below 200% of FPL. </p>
                 </CardHeader>
                 <CardBody>
-                  <Row>
-                    <Col>
-                <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
+
+                  <p className="card-category">How Much</p>
+                  <HorizontalBar
+                    height={20} data={howMuch.data} options = {howMuch.options}/>
+                    <HorizontalBar
+                    height={20} data={howMuch2.data} options = {howMuch2.options} />
+                     <HorizontalBar
+                    height={20} data={howMuch3.data} options = {howMuch3.options} />
                     <br/>
-                    </Col>
-                    <Col>
+
                     <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
+                    <HorizontalBar
+                    height={20} data={howWell1.data} options = {howWell1.options}/>
+                    <HorizontalBar
+                    height={20} data={howWell2.data} options = {howWell2.options} />
                     <br/>
-                    </Col>
-                    <Col>
+
                     <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
+                    <HorizontalBar
+                    height= {20} data={betterOff1.data} options = {betterOff1.options}/>
+                    <HorizontalBar
+                    height={20} data={betterOff2.data} options = {betterOff2.options} />
+                    <HorizontalBar
+                    height={20} data={betterOff3.data} options = {betterOff3.options} />
+                    
+
                 </CardBody>
                 <CardFooter>
                   <hr />
@@ -98,4 +113,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default Strategy;

@@ -18,6 +18,10 @@
 */
 import Dashboard from "views/Dashboard.jsx";
 import Icons from "views/Icons.jsx";
+import Internal from "views/internal.jsx";
+import Strategy from "views/Strategy.jsx";
+
+
 var routes = [
   {
     path: "/dashboard",
@@ -31,6 +35,20 @@ var routes = [
     name: "Icons",
     icon: "nc-icon nc-diamond",
     component: Icons,
+    layout: "/admin"
+  },
+  {
+    path: "/internal",
+    name: "Internal",
+    icon: "nc-icon nc-diamond",
+    component: Internal,
+    layout: "/admin"
+  },
+  {
+    path: "/strategy",
+    name: "Strategy",
+    icon: "nc-icon nc-diamond",
+    component: Strategy,
     layout: "/admin"
   }
 ];

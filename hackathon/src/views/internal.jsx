@@ -34,7 +34,7 @@ import {
   howMuch,
   howWell,
   betterOff
-} from "variables/charts.jsx";
+} from "variables/internal_charts.jsx";
 
 const data = {
   labels: ['Metric 1', 'Metric 2', 'Metric 3'],
@@ -51,7 +51,7 @@ const data = {
   ]
 };
 
-class Dashboard extends React.Component {
+class Internal extends React.Component {
   render() {
     return (
       <>
@@ -60,28 +60,24 @@ class Dashboard extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Strategy 1</CardTitle>
+                  <CardTitle tag="h5">Program A</CardTitle>
                 </CardHeader>
                 <CardBody>
-                  <Row>
-                    <Col>
+
                 <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
+                  <HorizontalBar
+                    height={40} data={howMuch.data} />
                     <br/>
-                    </Col>
-                    <Col>
+
                     <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
+                    <HorizontalBar
+                    height={40} data={howWell.data} />
                     <br/>
-                    </Col>
-                    <Col>
+
                     <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
+                    <HorizontalBar 
+                    height={40} data={betterOff.data} />
+
                 </CardBody>
                 <CardFooter>
                   <hr />
@@ -98,4 +94,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default Internal;
