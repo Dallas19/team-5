@@ -9,12 +9,13 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-import React from "react";
+import React, { useState } from "react";
 // react plugin used to create charts
-import { Line, Pie, HorizontalBar } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardText} from 'reactstrap';
+import classnames from 'classnames';
 // reactstrap components
 import {
-  Card,
   CardHeader,
   CardBody,
   CardFooter,
@@ -23,11 +24,7 @@ import {
   Col
 } from "reactstrap";
 // core components
-import {
-  dashboard24HoursPerformanceChart,
-  dashboardEmailStatisticsChart,
-  dashboardNASDAQChart
-} from "variables/charts.jsx";
+import Strategies from "components/Tabs";
 
 const data = {
   labels: ['Metric 1', 'Metric 2', 'Metric 3'],
@@ -44,160 +41,67 @@ const data = {
   ]
 };
 
-class Dashboard extends React.Component {
-  render() {
+const Impacts = (props) => {
+  const [activeTab, setActiveTab] = useState('1');
+
+  const toggle = tab => {
+    if(activeTab !== tab) setActiveTab(tab);
+  }
     return (
       <>
-        <div className="content">
-        <h3>Indicator 1</h3>
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h5">Strategy 1</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Row>
-                    <Col>
-                <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
-                </CardBody>
-                <CardFooter>
-                  <hr />
-                  <div className="stats">
-                    <i className="fa fa-history" /> Updated 3 minutes ago
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h5">Strategy 2</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Row>
-                    <Col>
-                <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
-                </CardBody>
-                <CardFooter>
-                  <hr />
-                  <div className="stats">
-                    <i className="fa fa-history" /> Updated 3 minutes ago
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-          <h3>Indicator 2</h3>
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h5">Strategy 1</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Row>
-                    <Col>
-                <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
-                </CardBody>
-                <CardFooter>
-                  <hr />
-                  <div className="stats">
-                    <i className="fa fa-history" /> Updated 3 minutes ago
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h5">Strategy 2</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Row>
-                    <Col>
-                <p className="card-category">How Much</p>
-                  <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">How Well</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    <br/>
-                    </Col>
-                    <Col>
-                    <p className="card-category">Better Off</p>
-                    <HorizontalBar width={200}
-                    height={100} data={data} />
-                    </Col>
-                    </Row>
-                </CardBody>
-                <CardFooter>
-                  <hr />
-                  <div className="stats">
-                    <i className="fa fa-history" /> Updated 3 minutes ago
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
+      <div className="content">
+      <Nav tabs>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '1' })}
+            onClick={() => { toggle('1'); }}
+          >
+            READY CHILDREN
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '2' })}
+            onClick={() => { toggle('2'); }}
+          >
+            SUCCESSFUL STUDENTS
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => { toggle('3'); }}
+          >
+            STRONG INDIVIDUALS AND FAMILIES
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '4' })}
+            onClick={() => { toggle('4'); }}
+          >
+            SAFETY NET
+          </NavLink>
+        </NavItem>
+      </Nav>
+      <TabContent activeTab={activeTab}>
+        <TabPane tabId="1">
+          <Strategies/>
+        </TabPane>
+        <TabPane tabId="2">
+          <Strategies/>
+        </TabPane>
+        <TabPane tabId="3">
+          <Strategies/>
+        </TabPane>
+        <TabPane tabId="4">
+          <Strategies/>
+        </TabPane>
+      </TabContent>
+        
         </div>
       </>
     );
   }
-}
-export default Dashboard;
+
+export default Impacts;

@@ -58,18 +58,17 @@ class Sidebar extends React.Component {
       >
         <div className="logo">
           <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-mini"
+            href="https://www.unitedwaysatx.org/"
           >
             <div className="logo-img">
               <img src={logo} alt="react-logo" />
             </div>
           </a>
           <a
-            href="https://www.creative-tim.com"
+            href="https://www.unitedwaysatx.org/"
             className="simple-text logo-normal"
           >
-            Creative Tim
+            United Way of San Antonio
           </a>
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>

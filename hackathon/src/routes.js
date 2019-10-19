@@ -28,7 +28,7 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/interal",
+    path: "/Interal",
     name: "Internal",
     icon: "nc-icon nc-diamond",
     component: Internal,
